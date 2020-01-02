@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Clock</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center vh-100 bg-dark">
+        <div class="col-xl-12 w-100">
+            <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-xl-3" >
+                    <form id="alarm-zone" class="alarm-zone form-group" onsubmit='alarm(); return false'>
+                        <div id="current-time" class="text-white"></div>
+                    <input type="time" name="alarm-input" class="form-control w-100 alarm-input" id="alarm-input" required>
+                    <input type="text" name="alarm-message" id="alarm-message" class="form-control mt-1" required placeholder="Enter the message here">
+                    <input type="submit" class="btn btn-info py-0 m-2 align-items-center set-alarm-btn" id="set-alarm-btn" value="Set Alarm">
+                </form>
+            </div>
+                <div class="col-xl-6">
+                    <div class="clock m-3 d-flex align-items-center border border-white rounded-circle p-1">
+                    <div class="big-hand" id="big-hand"></div>
+                    <div class="short-hand" id="short-hand"></div>
+                    <div class="seconds-hand" id="seconds-hand"></div>
+                  </div>
+                </div>
+                <div class="col-xl-3" id="timer-zone">
+                    <div class="stopwatch-zone m-4" id="stopwatch-zone">
+                        <div id="stopwatch-display" class="stopwatch-display text-white border border-white text-center"><span id="hour">00</span>:<span id="min">00</span>:<span id="sec">00</span>:<span id="centsec">00</span>
+                        <div class="stopWatchBtns p-1" >
+                            <button class="btn btn-info"id="stopWatchBtn" onclick="stopWatch()">Start</button> 
+                            <button class="btn btn-info stopBtn" id="stopBtn" onclick="stopStpWatch()">Stop</button> 
+                            <button class="btn btn-info resetBtn mt-1" id="resetBtn" onclick="resetTimer()">Reset</button> 
+                        </div>
+                     </div>
+                    </div>
+                    <div class="timer-zone">
+                        <div class="timer-display border border-white p-2" id="timer-display">
+                            <form onsubmit="timer(); return false" class="form-group">
+                            <input type="time" name="timer-input" class="form-control text-center ml-4 w-75" step="2" id="timer-input" required>
+                            <input type="submit" value="Start Timer"  class="btn btn-secondary mt-2 ml-3 timer-buttons text-white text-center">
+                            <button class="btn btn-secondary mt-2 timer-buttons text-white text-center" onclick="stopTimer()">Stop Timer</button>
+                            <button class="btn btn-secondary mt-2 timer-buttons resetTimerBtn text-white text-center">Reset Timer</button>
+                                    <div class="timerDown text-white text-center" id="timerDown">
+                                        <span id="timerhour"></span> :
+                                        <span id="timermin"></span> :
+                                        <span id="timersec"></span>
+                                    </div>
+                                
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                        <div class="row d-flex justify-content-center">
+                            <button class="btn btn1 btn-secondary m-3" onclick="alarmVis()">Alarm</button>
+                            <button class="btn btn-secondary m-3" onclick="stopwatchVis()">Stop Watch</button>
+                            <button class="btn btn-secondary m-3" onclick="timerVis()">Timer</button>
+                        </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

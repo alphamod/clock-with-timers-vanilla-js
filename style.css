@@ -1,0 +1,75 @@
+.clock {
+  position: relative;
+  height: 400px !important;
+  width: 400px !important;
+  border-width: 0.25rem !important;
+  /* padding: 55px !important; */
+}
+
+.seconds-hand {
+  width: 1px;
+  height: 50%;
+  background-color: white;
+  transform-origin: 50% 80%;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  /* transform:rotate(6deg); */
+}
+
+.big-hand {
+  width: 3px;
+  height: 40%;
+  background-color: cornsilk;
+  transform-origin: 50% 80%;
+  position: absolute;
+  top: 18%;
+  left: calc(50% - 1px);
+}
+.short-hand {
+  width: 5px;
+  height: 25%;
+  background-color: teal;
+  transform-origin: 50% 80%;
+  position: absolute;
+  top: 30%;
+  left: calc(50% + -2px);
+}
+
+.btn{
+    height:4rem !important;
+    width: 5rem !important;
+}
+.btn1{
+    margin-left: -60px !important;
+}
+
+.alarm-zone{
+    position: absolute;
+    top: 50%;
+    visibility: hidden;
+}
+.set-alarm-btn{
+    width: 6rem !important;
+    height: 2rem !important;
+}
+
+.stopwatch-display{
+    visibility: hidden;
+}
+.stopBtn{
+    visibility: hidden;
+}
+.resetBtn{
+    visibility: hidden;
+}
+
+.timer-buttons{
+    height: 2rem !important;
+    width: 6rem !important;
+    padding: .25rem !important;
+}
+
+.resetTimerBtn{
+    margin-left: 4rem;;
+}
